@@ -17,7 +17,7 @@ function adicionar() {
         listaAmigos.textContent = listaAmigos.textContent + ', ' + amigo.value;
     }
     amigo.value = '';
-
+    transformaParaMaiusculo ();
     atualizarLista();
     atualizarSorteio();
 }
@@ -82,6 +82,13 @@ function atualizarLista() {
         lista.appendChild(paragrafo);
     }
 }
+function transformaParaMaiusculo(palavras){
+
+    for (let i=0; i<palavras.lengh; i++){
+       palavras.push(palavras[i].toUpperCase())
+    }
+    return palavras
+ }
 
 function reiniciar(){
     amigos = [];
