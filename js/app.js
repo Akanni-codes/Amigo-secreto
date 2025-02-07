@@ -1,6 +1,10 @@
 let amigos = [];
 function adicionar() {
     let amigo = document.getElementById('nome-amigo');
+    if (amigo.value == ''){
+        alert('Adicione um nome');
+        return
+    }
     let listaAmigos = document.getElementById('lista-amigos');
     amigos.push(amigo.value);
     if (listaAmigos.textContent == ''){
